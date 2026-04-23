@@ -1,0 +1,91 @@
+keyword,n_doc,total_freq,mean_rake
+music therapy,25,157,3.845984227
+premature infant,13,53,2.491110279
+heart rate,5,12,2.883333333
+behavioral state,3,8,2.348148148
+infant bonding,3,8,2.508465608
+standard care,3,12,1.883597884
+bayley scales,2,6,2
+bonding scale,2,4,3.629365079
+depressive symptoms,2,10,1.9375
+hospital discharge,2,5,1.575
+kangaroo care,2,17,2.742063492
+mother anxiety,2,6,1.751298701
+neonatal intensive care unit,2,4,12.33333333
+skin care,2,15,1.546153846
+term effects,2,6,2
+toddler development,2,6,1.596590909
+weight gain,2,6,2
+#NAME?,1,2,6
+acoustic environment,1,3,2
+acute stress reactions,1,5,5.666666667
+autonomic nervous system,1,3,7.285714286
+behavioral effects,1,2,2.444444444
+blood pressure,1,2,2
+bronchopulmonary dysplasia,1,3,2
+child bonding,1,2,2
+contingent singing,1,2,1.8
+developmental care modalities such,1,5,12.16666667
+dual treatment,1,5,2.333333333
+effect_of contingent,1,2,1.8
+emotional support,1,3,2.2
+events scale,1,6,3
+extreme prematurity,1,2,2
+family wellbeing,1,3,1.6
+german version,1,5,2
+gestational age,1,3,2
+health profession,1,7,2.125
+heartbeat-music interventions,1,3,1.75
+high frequency,1,2,2.666666667
+high risk,1,5,2.285714286
+high satisfaction,1,2,2
+infant attachment,1,4,1.338461538
+infant interaction,1,3,2.4
+infant stress,1,3,1.916666667
+inpatient mother,1,7,2.15
+israeli parent,1,5,1.833333333
+language development,1,4,2.484848485
+lullaby intervention,1,2,1.166666667
+lullaby system,1,2,3.5
+mother depression,1,3,1.928571429
+mother mental health,1,2,4.857142857
+mother singing,1,2,2.285714286
+music intervention,1,2,2.7
+musical dialogues,1,4,1.833333333
+neonatal care,1,4,2.4
+neonatal function,1,2,2
+neonatal infant stressor scale,1,2,9.916666667
+neuro development,1,2,1.75
+nipple feeding,1,2,2.25
+nonnutritive sucking,1,2,2
+nonpharmacological interventions such,1,10,6
+parent during,1,2,1.375
+parent-preferred lullaby,1,3,1.5
+parental anxiety,1,2,2
+peripheral oxygen_saturation,1,3,2
+physiologic stability,1,2,2
+physiological changes,1,2,2
+physiological effects,1,2,2
+physiological responses,1,7,2.125
+post-traumatic stress,1,2,3
+premature children,1,7,1.666666667
+premature mother,1,3,1.8
+psycho-emotional development,1,2,2.25
+re-hospitalization rate,1,2,2
+regional cerebral oxygenation,1,4,8.033333333
+respiratory rate,1,5,2
+severe brain injury,1,8,6
+skin contact,1,3,2
+spatial statistics,1,2,2
+stress level,1,4,3.428571429
+stress numeric rating scale,1,2,10.0625
+stress reduction role,1,7,5.539772727
+stressful environment,1,2,2
+subcategory hyperarousal,1,2,2
+such neurodevelopmental impairments,1,10,5.909090909
+trait anxiety inventory,1,2,5.1
+transcutaneous oxygen_saturation,1,2,2
+underwent skin,1,3,2
+very_preterm infant,1,3,1.6
+vital sign,1,2,2
+white matter,1,6,4.53968254
