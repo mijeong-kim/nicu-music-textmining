@@ -7,6 +7,7 @@ This repository contains R scripts, processed summary tables, and figure outputs
 - Public-facing R scripts used to regenerate the main and supplementary figures
 - Processed CSV files needed for figure generation
 - High-resolution PNG figure outputs
+- A lightweight reproducibility scaffold for readers and reviewers
 
 ## What is not included
 
@@ -66,6 +67,15 @@ The topic-keyword network figure additionally requires:
 - `igraph`
 - `ggraph`
 
+## Tested environment
+
+- `R` 4.5.0
+- macOS Apple Silicon
+- Core packages used in the current public workflow:
+  `readr`, `dplyr`, `stringr`, `forcats`, `ggplot2`, `tidyr`, `tidytext`, `igraph`, `ggraph`
+
+If package versions differ slightly on another machine, the regenerated figures should remain substantively similar because the public workflow is driven by processed summary tables rather than stochastic refitting from raw text.
+
 ## How to run
 
 From the repository root:
@@ -77,8 +87,18 @@ Rscript scripts/make_study_selection_figure.R
 
 The regenerated figures will be written to `results/figures/`.
 
+For a clean setup, install the required packages first, for example:
+
+```r
+install.packages(c(
+  "readr", "dplyr", "stringr", "forcats",
+  "ggplot2", "tidyr", "tidytext", "igraph", "ggraph"
+))
+```
+
 ## Notes on reproducibility
 
 - Figures 1--4 and most supplementary figures are regenerated directly from processed summary CSV files in `data/processed/`.
 - Topic trend and topic-by-intervention figures are reproduced from public summary tables derived from the original analytic workflow, rather than from private raw-text inputs.
 - The study-selection overview is a documentation figure based on retained workflow notes and the final analytic corpus size (`n = 83`).
+- The repository is intentionally public-safe: it excludes the private workbook and raw abstract text while retaining the processed outputs needed to inspect and reproduce the published visualizations.
