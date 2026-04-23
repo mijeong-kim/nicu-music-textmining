@@ -145,24 +145,32 @@ save_plot(p4, "04_topic_modeling_results.png", width = 12, height = 7.5)
 topic_period <- read_csv(file.path(input_dir, "topic_period_counts.csv"), show_col_types = FALSE) %>%
   mutate(
     period = factor(period, levels = c("Period 1", "Period 2", "Period 3", "Period 4")),
-    topic = factor(topic, levels = c("1", "2", "3", "4"))
+    topic = factor(topic, levels = c("1", "2", "3", "4"), labels = c("Topic 1", "Topic 2", "Topic 3", "Topic 4"))
   ) %>%
   complete(period, topic, fill = list(n = 0))
 
-p5 <- ggplot(topic_period, aes(period, n, color = topic, group = topic)) +
-  geom_line(linewidth = 1.15) +
-  geom_point(size = 3.1) +
-  scale_color_manual(values = c("1" = "#E76F51", "2" = "#7CAE00", "3" = "#00BFC4", "4" = "#C77CFF")) +
-  labs(
-    title = "Dominant Topic Assignments Across Publication Periods",
-    subtitle = "Each study was assigned to the topic with the highest gamma value",
-    x = "Publication period",
-    y = "Number of studies assigned to topic",
-    color = "Topic"
+p5 <- ggplot(topic_period, aes(period, topic, fill = n)) +
+  geom_tile(color = "white", linewidth = 1.15, width = 0.96, height = 0.9) +
+  geom_text(aes(label = n), size = 4.6, fontface = "bold", color = "#1F1F1F") +
+  scale_fill_gradient(
+    low = "#E8F1FB",
+    high = "#1F5A91"
   ) +
-  theme_codex()
+  labs(
+    title = "Dominant Topic Assignments by Publication Period",
+    subtitle = "Annotated heatmap showing study counts after assigning each abstract to its highest-gamma topic",
+    x = "Publication period",
+    y = NULL,
+    fill = "Study count"
+  ) +
+  theme_codex() +
+  theme(
+    panel.grid = element_blank(),
+    axis.text.x = element_text(face = "bold"),
+    axis.text.y = element_text(face = "bold")
+  )
 
-save_plot(p5, "05_topic_trends.png", width = 9.6, height = 6.2)
+save_plot(p5, "05_topic_trends.png", width = 9.6, height = 5.8)
 
 # Appendix A1. Effect-focused phrases by period
 intervention_trend <- read_csv(file.path(input_dir, "intervention_trend.csv"), show_col_types = FALSE) %>%
