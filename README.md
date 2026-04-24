@@ -26,8 +26,10 @@ nicu-music-textmining/
   scripts/
     refresh_figures.R
     make_study_selection_figure.R
+    summarize_effect_phrases.R
   data/
     processed/
+      effect_phrase_summary_normalized.csv
       intervention_trend.csv
       MM_keyword_summary.csv
       MT_keyword_summary.csv
@@ -87,6 +89,14 @@ Rscript scripts/make_study_selection_figure.R
 
 The regenerated figures will be written to `results/figures/`.
 
+If you have a local phrase-level extraction file for the supplementary
+`effect(s) of ...` analysis, you can also regenerate the normalized phrase
+summary used for the supplementary tables:
+
+```r
+Rscript scripts/summarize_effect_phrases.R path/to/effect_phrase_extracted.csv
+```
+
 For a clean setup, install the required packages first, for example:
 
 ```r
@@ -100,5 +110,6 @@ install.packages(c(
 
 - Figures 1--4 and most supplementary figures are regenerated directly from processed summary CSV files in `data/processed/`.
 - Topic trend and topic-by-intervention figures are reproduced from public summary tables derived from the original analytic workflow, rather than from private raw-text inputs.
+- The normalized `effect(s) of ...` phrase summary used for the supplementary tables is included as a processed CSV. A helper script is provided for authors who wish to recompute that summary from a local phrase-level extraction file.
 - The study-selection overview is a documentation figure based on retained workflow notes and the final analytic corpus size (`n = 83`).
 - The repository is intentionally public-safe: it excludes the private workbook and raw abstract text while retaining the processed outputs needed to inspect and reproduce the published visualizations.
